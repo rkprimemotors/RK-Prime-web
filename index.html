@@ -1,514 +1,138 @@
 <!DOCTYPE html>
-<html lang="si" class="scroll-smooth">
+<html lang="si">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RK Prime 合同会社 | Modern Solutions & Quality Products</title>
-
+    <title>RK Prime 合同会社 | Products & Services</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        /* Custom Styles (Optional) */
-        .gradient-bg {
-            background: linear-gradient(135deg, #0d47a1 0%, #1e88e5 100%); /* Example Blue Gradient */
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        #threejs-canvas-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            /* Background color fallback */
-            background-color: #1a202c;
-        }
-        #p5-canvas-container canvas {
-             display: block; /* Ensure canvas behaves like a block element */
-             /* Add any specific constraints if needed */
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
-<body class="bg-gray-50 font-sans antialiased text-gray-800">
+<body class="bg-gray-100 font-sans leading-normal tracking-wider">
 
-    <header class="bg-white shadow-md sticky top-0 z-50 transition-shadow duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tight">
-                <a href="#home">
-                    <span class="text-blue-700">RK Prime</span>
-                    <span class="text-gray-600">合同会社</span>
-                </a>
+    <!-- Header Section -->
+    <header class="bg-blue-900 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold">
+                <span class="text-yellow-500">RK Prime</span> 合同会社
             </div>
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="text-gray-600 hover:text-blue-700 transition duration-300">Home</a>
-                <a href="#products" class="text-gray-600 hover:text-blue-700 transition duration-300">Products</a>
-                <a href="#services" class="text-gray-600 hover:text-blue-700 transition duration-300">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-700 transition duration-300">About Us</a>
-                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold py-2 px-5 rounded-full transition duration-300 shadow hover:shadow-md">
-                    Contact
-                </a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-lg hover:text-yellow-500">Home</a></li>
+                    <li><a href="#products" class="text-lg hover:text-yellow-500">Products</a></li>
+                    <li><a href="#services" class="text-lg hover:text-yellow-500">Services</a></li>
+                    <li><a href="#about" class="text-lg hover:text-yellow-500">About Us</a></li>
+                    <li><a href="#contact" class="text-lg hover:text-yellow-500">Contact</a></li>
+                </ul>
             </nav>
-            <button class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
         </div>
     </header>
 
-    <section id="home" class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
-        <div id="threejs-canvas-container">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-900 opacity-90"></div>
-        </div>
-
-        <div class="relative z-10 p-8 max-w-3xl mx-auto" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
-                Your <span class="text-yellow-400">Trusted Partner</span> in Sri Lanka & Beyond
-            </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-xl mx-auto">
-                Delivering diverse quality products and professional services tailored to your needs. From local crafts to global solutions.
-            </p>
-            <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg">
-                Get Started
-            </a>
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-96 text-center text-white relative" style="background-image: url('https://via.placeholder.com/1500x800');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 p-12">
+            <h1 class="text-5xl font-bold mb-4">Your Trusted Partner in Sri Lanka</h1>
+            <p class="text-lg mb-8">Quality Products & Professional Services for Every Need</p>
+            <a href="#contact" class="bg-yellow-500 text-black py-3 px-6 rounded-full text-lg font-semibold">Get in Touch</a>
         </div>
     </section>
 
-    <section id="products" class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">Discover Our Products</h2>
-            <p class="text-lg text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                A curated selection of quality goods, from delightful treats to everyday essentials and unique Sri Lankan items.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                     <div class="text-5xl text-yellow-500 mb-5 inline-block">🎂</div> {/* Placeholder Icon */}
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Yummy Planet.lk</h3>
-                    <p class="text-gray-600">Delicious, freshly baked cakes delivered for every special occasion.</p>
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Products</h2>
+            <p class="text-lg text-gray-600 mb-12">Explore our wide range of products from cakes, spices to second-hand items and local crafts.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                <!-- Yummy Planet.lk -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-birthday-cake text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Yummy Planet.lk</h3>
+                    <p class="text-gray-700">Delicious cakes for every occasion. Freshly baked and delivered to your doorstep.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-5xl text-yellow-500 mb-5 inline-block">🌶️</div> {/* Placeholder Icon */}
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">RK Spice Paradise</h3>
-                    <p class="text-gray-600">Authentic, aromatic RK spices to elevate your culinary creations.</p>
+                <!-- RK Spices　Paradise -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-pepper-hot text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">RK Spice Paradise</h3>
+                    <p class="text-gray-700">Authentic RK spices to add flavor to your meals.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-5xl text-yellow-500 mb-5 inline-block">♻️</div> {/* Placeholder Icon */}
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Second Chance</h3>
-                    <p class="text-gray-600">Quality second-hand goods: kitchenware, stationery, beauty, fashion & more.</p>
+                <!-- Second Chance -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-redo text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Second Chance</h3>
+                    <p class="text-gray-700">A collection of second-hand goods including kitchen items, stationery, beauty products, shoes, clothes, and chocolates.</p>
                 </div>
-                 <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
-                     <div class="text-5xl text-yellow-500 mb-5 inline-block">🍳</div> {/* Placeholder Icon */}
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Cooka Ruka</h3>
-                    <p class="text-gray-600">Authentic Sri Lankan kitchenware to bring tradition to your home.</p>
+                <!-- Cooka Ruka -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-utensils text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Cooka Ruka</h3>
+                    <p class="text-gray-700">Sri Lankan kitchenware for your culinary adventures.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 md:py-28 bg-gradient-to-b from-blue-50 to-gray-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">Comprehensive Services</h2>
-            <p class="text-lg text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                Professional solutions across diverse sectors, ensuring reliability and excellence.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-5xl text-yellow-500 mb-5 inline-block">🚗</div> {/* Placeholder Icon */}
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Motor Parts & Car Sales</h3>
-                    <p class="text-gray-600">Your source for quality automotive parts and vehicle transactions.</p>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Services</h2>
+            <p class="text-lg text-gray-600 mb-12">Providing quality services across various industries, from motor parts to travel services.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                <!-- Motor Parts & Car Sales -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-car text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Motor Parts & Car Sales</h3>
+                    <p class="text-gray-700">Buy and sell quality motor parts and vehicles.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                     <div class="text-5xl text-yellow-500 mb-5 inline-block">🏗️</div> {/* Placeholder Icon */}
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Construction & Transport</h3>
-                    <p class="text-gray-600">Reliable services for building projects and logistical needs.</p>
+                <!-- Construction & Transport -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-hard-hat text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Construction & Transport</h3>
+                    <p class="text-gray-700">Reliable construction and transport services for your business needs.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                     <div class="text-5xl text-yellow-500 mb-5 inline-block">✈️</div> {/* Placeholder Icon */}
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Ultra Travels</h3>
-                    <p class="text-gray-600">Crafting memorable journeys with personalized travel packages.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <section id="why-choose-us" class="py-20 md:py-28 bg-white relative">
-        <div id="p5-canvas-container" class="absolute inset-0 z-0 opacity-10" style="pointer-events: none;">
-            </div>
-
-        <div class="container mx-auto px-6 text-center relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">Why Partner with RK Prime?</h2>
-            <p class="text-lg text-gray-600 mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                We are committed to excellence, integrity, and building lasting relationships.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-6 bg-blue-50 rounded-full inline-block mb-4">
-                         <span class="text-3xl">⭐</span> {/* Placeholder Icon */}
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Uncompromising Quality</h3>
-                    <p class="text-gray-600">We source and deliver only the best products and services.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-6 bg-blue-50 rounded-full inline-block mb-4">
-                         <span class="text-3xl">🌐</span> {/* Placeholder Icon */}
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Diverse Portfolio</h3>
-                    <p class="text-gray-600">Meeting a wide range of needs under one trusted name.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="400">
-                     <div class="p-6 bg-blue-50 rounded-full inline-block mb-4">
-                         <span class="text-3xl">🤝</span> {/* Placeholder Icon */}
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Customer-Centric</h3>
-                    <p class="text-gray-600">Your satisfaction is our top priority. We listen and adapt.</p>
+                <!-- Ultra Travels -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-plane text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Ultra Travels</h3>
+                    <p class="text-gray-700">Customizable travel packages for all your tourism needs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="py-20 md:py-28 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12" data-aos="fade-up">What Our Clients Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <p class="text-gray-600 italic mb-4">"Working with RK Prime was a seamless experience. Their attention to detail and commitment to quality is outstanding."</p>
-                    <p class="font-semibold text-blue-700">- Client Name 1</p>
-                    <p class="text-sm text-gray-500">Service/Product Used</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <p class="text-gray-600 italic mb-4">"The products offered are unique and high-quality. RK Spice Paradise has become a staple in my kitchen!"</p>
-                     <p class="font-semibold text-blue-700">- Client Name 2</p>
-                    <p class="text-sm text-gray-500">Product User</p>
-                </div>
-                 <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
-                    <p class="text-gray-600 italic mb-4">"Professional, reliable, and always exceeding expectations. Highly recommend their transport services."</p>
-                    <p class="font-semibold text-blue-700">- Client Name 3</p>
-                    <p class="text-sm text-gray-500">Service User</p>
-                </div>
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">About RK Prime</h2>
+            <p class="text-lg text-gray-600 mb-8">RK Prime is committed to delivering quality products and services across a range of industries. We offer everything from delicious cakes to motor parts and construction services.</p>
+            <a href="#contact" class="bg-blue-900 text-white py-3 px-6 rounded-full text-lg font-semibold">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Us</h2>
+            <p class="text-lg text-gray-600 mb-8">Have questions or need more information? Contact us today for personalized assistance.</p>
+            <div class="space-y-4">
+                <p class="text-lg text-gray-700">Phone: +1 234 567 890</p>
+                <p class="text-lg text-gray-700">Email: info@rkprime.com</p>
+            </div>
+            <div class="mt-8">
+                <a href="mailto:info@rkprime.com" class="bg-yellow-500 text-black py-3 px-6 rounded-full text-lg font-semibold">Email Us</a>
             </div>
         </div>
     </section>
 
-
-    <section id="about" class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About RK Prime 合同会社</h2>
-                <p class="text-lg text-gray-600 mb-6">
-                    RK Prime 合同会社 is a dynamic company based in [Your Location, e.g., Yokohama, Japan], dedicated to bridging markets and providing exceptional value. We operate with a strong presence in Sri Lanka, offering a unique blend of products and services.
-                </p>
-                 <p class="text-lg text-gray-600 mb-6">
-                   Our mission is to foster growth and connection through reliable trade, innovative solutions, and a commitment to customer satisfaction. We pride ourselves on our integrity and our ability to adapt to the evolving needs of our clients.
-                </p>
-                <a href="#contact" class="bg-blue-700 hover:bg-blue-800 text-white py-3 px-8 rounded-full text-lg font-semibold transition duration-300 inline-block shadow hover:shadow-md">
-                    Learn More About Us
-                </a>
-            </div>
-             <div class="md:w-1/2" data-aos="fade-left" data-aos-delay="200">
-                 {/* Placeholder for an image or graphic about the company */}
-                 <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg shadow-xl h-80 flex items-center justify-center text-white font-bold text-2xl">
-                     [Company Image/Graphic Area]
-                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 md:py-24 gradient-bg text-white">
-        <div class="container mx-auto px-6 text-center" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
-            <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
-                Whether you're looking for quality products or reliable services, RK Prime is here to help. Contact us today to discuss your needs.
-            </p>
-            <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg">
-                Contact Us Now
-            </a>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 md:py-28 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center" data-aos="fade-up">Get in Touch</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div data-aos="fade-right">
-                    <h3 class="text-2xl font-semibold text-blue-800 mb-6">Contact Details</h3>
-                    <p class="text-lg text-gray-600 mb-4">
-                        Have questions or need assistance? Reach out to us!
-                    </p>
-                    <div class="space-y-4 text-gray-700">
-                        <p><strong class="font-medium">Phone:</strong> <a href="tel:+1234567890" class="hover:text-blue-600">+1 234 567 890</a> (Update with real number)</p>
-                        <p><strong class="font-medium">Email:</strong> <a href="mailto:info@rkprime.com" class="hover:text-blue-600">info@rkprime.com</a> (Update with real email)</p>
-                        <p><strong class="font-medium">Address:</strong> [Your Company Address], Yokohama, Kanagawa, Japan (Update)</p>
-                        {/* Optional: Add business hours */}
-                         <p><strong class="font-medium">Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM JST</p>
-                    </div>
-                     {/* Social Media Links Placeholder */}
-                    <div class="mt-8">
-                        <h4 class="text-lg font-semibold mb-3 text-blue-800">Follow Us</h4>
-                         <div class="flex space-x-4">
-                            <a href="#" class="text-gray-500 hover:text-blue-700 text-2xl transition duration-300"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-gray-500 hover:text-blue-700 text-2xl transition duration-300"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="text-gray-500 hover:text-blue-700 text-2xl transition duration-300"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-left" data-aos-delay="100">
-                    <h3 class="text-2xl font-semibold text-blue-800 mb-6">Send Us a Message</h3>
-                    <form action="#" method="POST" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                         <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                            <input type="text" name="subject" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold py-3 px-6 rounded-md transition duration-300 shadow-md">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-blue-900 text-gray-300 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">RK Prime 合同会社</h4>
-                    <p class="text-sm">Your trusted partner for quality products and services in Sri Lanka and beyond.</p>
-                     <p class="text-sm mt-2">[Your Company Address, Yokohama]</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a></li>
-                        <li><a href="#products" class="hover:text-yellow-400 transition duration-300">Products</a></li>
-                        <li><a href="#services" class="hover:text-yellow-400 transition duration-300">Services</a></li>
-                        <li><a href="#about" class="hover:text-yellow-400 transition duration-300">About Us</a></li>
-                        <li><a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Our Offerings</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#products" class="hover:text-yellow-400 transition duration-300">Yummy Planet Cakes</a></li>
-                        <li><a href="#products" class="hover:text-yellow-400 transition duration-300">RK Spices</a></li>
-                        <li><a href="#services" class="hover:text-yellow-400 transition duration-300">Motor Parts</a></li>
-                        <li><a href="#services" class="hover:text-yellow-400 transition duration-300">Construction Services</a></li>
-                         <li><a href="#services" class="hover:text-yellow-400 transition duration-300">Ultra Travels</a></li>
-                    </ul>
-                </div>
-                <div>
-                     <h4 class="text-lg font-semibold text-white mb-4">Connect With Us</h4>
-                     <p class="text-sm mb-3">info@rkprime.com</p>
-                     <p class="text-sm mb-4">+1 234 567 890</p>
-                     <div class="flex space-x-4">
-                            <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-yellow-400 text-xl transition duration-300"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-yellow-400 text-xl transition duration-300"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-yellow-400 text-xl transition duration-300"><i class="fab fa-instagram"></i></a>
-                     </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 pt-8 text-center text-sm">
-                <p>&copy; 2025 RK Prime 合同会社 | All Rights Reserved.</p>
-                {/* Optional: Add Privacy Policy / Terms links */}
-                 <p class="mt-2"><a href="#" class="hover:text-yellow-400">Privacy Policy</a> | <a href="#" class="hover:text-yellow-400">Terms of Service</a></p>
-            </div>
+    <!-- Footer Section -->
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 RK Prime 合同会社 | All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800, // Animation duration
-            once: true, // Whether animation should happen only once - while scrolling down
-        });
+        // Add custom JS functionalities if needed
     </script>
-
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.163.0/build/three.module.js",
-                 "three/addons/": "https://unpkg.com/three@0.163.0/examples/jsm/"
-            }
-        }
-    </script>
-    <script type="module">
-        // *** START THREE.JS CODE FOR HERO BACKGROUND ***
-        import * as THREE from 'three';
-        // Example: Import OrbitControls if needed: import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-
-        const container = document.getElementById('threejs-canvas-container');
-        if (container) {
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); // alpha:true for transparent bg
-
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.setPixelRatio(window.devicePixelRatio); // Adjust for high-res screens
-            container.appendChild(renderer.domElement);
-
-            // Example: Add simple particles
-            const particleCount = 5000;
-            const particles = new THREE.BufferGeometry();
-            const positions = new Float32Array(particleCount * 3);
-            const colors = new Float32Array(particleCount * 3);
-            const color = new THREE.Color();
-
-            for (let i = 0; i < particleCount * 3; i++) {
-                positions[i] = (Math.random() - 0.5) * 15; // Spread particles
-                color.setHSL(Math.random(), 0.8, 0.7); // Random hue, good saturation/lightness
-                colors[i * 3] = color.r;
-                colors[i * 3 + 1] = color.g;
-                colors[i * 3 + 2] = color.b;
-            }
-            particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-             particles.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-            const particleMaterial = new THREE.PointsMaterial({
-                size: 0.05,
-                 vertexColors: true, // Use the colors defined above
-                 // Optional: add blending for a softer look
-                 // blending: THREE.AdditiveBlending,
-                 // transparent: true,
-                 // depthWrite: false // often needed with additive blending
-            });
-            const particleSystem = new THREE.Points(particles, particleMaterial);
-            scene.add(particleSystem);
-
-            camera.position.z = 5;
-
-             // Handle window resize
-            window.addEventListener('resize', () => {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            }, false);
-
-            // Animation loop
-            function animate(time) {
-                requestAnimationFrame(animate);
-
-                // Subtle animation (e.g., rotate particle system)
-                const t = time * 0.0001; // slow down animation
-                particleSystem.rotation.y = t;
-                particleSystem.rotation.x = t * 0.5;
-
-
-                renderer.render(scene, camera);
-            }
-            animate();
-
-            console.log("Three.js scene initialized.");
-        } else {
-             console.error("Three.js container not found.");
-        }
-        // *** END THREE.JS CODE ***
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha512-uaz5GpnQoWhODKzDeUOSUzmpTli9NXNnsdquiAXAVTgLPdRXPXdA7Yhi7rI9TUw8+UtI/2QSNfSqLfzvYdNKaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        // *** START P5.JS CODE FOR VISUAL ELEMENT ***
-        const sketchContainerId = 'p5-canvas-container';
-        const p5Container = document.getElementById(sketchContainerId);
-
-        if (p5Container) {
-            const sketch = (p) => {
-                let particles = [];
-                const numParticles = 50;
-
-                class Particle {
-                    constructor() {
-                        this.pos = p.createVector(p.random(p.width), p.random(p.height));
-                        this.vel = p.createVector(p.random(-0.5, 0.5), p.random(-0.5, 0.5));
-                        this.acc = p.createVector(0, 0);
-                        this.maxSpeed = 1;
-                        this.color = p.color(p.random(180, 220), p.random(80, 100), p.random(80, 100), 50); // Subtle blue/alpha
-                    }
-
-                    update() {
-                        this.vel.add(this.acc);
-                        this.vel.limit(this.maxSpeed);
-                        this.pos.add(this.vel);
-                        this.acc.mult(0); // Reset acceleration
-                        this.edges();
-                    }
-
-                    applyForce(force) {
-                        this.acc.add(force);
-                    }
-
-                    show() {
-                        p.noStroke();
-                        p.fill(this.color);
-                        p.ellipse(this.pos.x, this.pos.y, 4, 4);
-                    }
-
-                    edges() {
-                        if (this.pos.x > p.width) this.pos.x = 0;
-                        if (this.pos.x < 0) this.pos.x = p.width;
-                        if (this.pos.y > p.height) this.pos.y = 0;
-                        if (this.pos.y < 0) this.pos.y = p.height;
-                    }
-                }
-
-                p.setup = () => {
-                    let canvas = p.createCanvas(p5Container.offsetWidth, p5Container.offsetHeight);
-                    canvas.parent(sketchContainerId); // Attach canvas to the container
-                     // Dynamically resize canvas if container size changes (simplified)
-                    // A more robust solution might use ResizeObserver
-                    p.windowResized = () => {
-                         p.resizeCanvas(p5Container.offsetWidth, p5Container.offsetHeight);
-                         // Reinitialize particles if needed based on new size
-                    }
-                    for (let i = 0; i < numParticles; i++) {
-                        particles.push(new Particle());
-                    }
-                };
-
-                p.draw = () => {
-                    p.clear(); // Clear background each frame for transparency
-                    // Optional: Add a subtle background if needed: p.background(255, 255, 255, 5);
-                    for (let particle of particles) {
-                        // Simple attraction towards center (can be removed or changed)
-                         // let center = p.createVector(p.width / 2, p.height / 2);
-                         // let force = p5.Vector.sub(center, particle.pos);
-                         // force.setMag(0.01);
-                         // particle.applyForce(force);
-
-                        particle.update();
-                        particle.show();
-                    }
-                };
-            };
-
-            new p5(sketch);
-            console.log("P5.js sketch initialized.");
-
-        } else {
-            console.error("P5.js container not found.");
-        }
-        // *** END P5.JS CODE ***
-    </script>
-
 </body>
 </html>
